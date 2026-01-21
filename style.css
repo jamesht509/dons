@@ -81,6 +81,13 @@ h1 {
     font-weight: 500;
 }
 
+/* Add padding to bottom of main content to prevent Floating Bar overlap on mobile */
+.layout-content-container,
+.result-panel {
+    padding-bottom: 120px !important;
+    /* Space for the floating bar */
+}
+
 /* Light Glass Cards (For Quiz) */
 .glass-card {
     background: var(--glass-bg);
@@ -369,5 +376,24 @@ h1 {
 
     .question-text {
         font-size: 1.25rem;
+    }
+
+    /* Mobile Landing Page Adjustments */
+    .glass-panel {
+        padding: 24px !important;
+        /* Reduce padding on mobile */
+    }
+
+    .input-luxe {
+        margin-bottom: 30px !important;
+        /* Ensure space below */
+        font-size: 1rem;
+        padding: 14px 20px;
+    }
+
+    .layout-content-container {
+        padding-top: 20px;
+        padding-bottom: 140px !important;
+        /* Extra bottom space for scrolling */
     }
 }
