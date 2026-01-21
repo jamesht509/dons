@@ -343,6 +343,28 @@ function renderQuiz() {
 function renderResults() {
     const sorted = Object.entries(state.scores).sort((a, b) => b[1] - a[1]);
     const topScore = sorted[0][1];
+
+    // --- EDGE CASE: All scores are 0 ---
+    if (topScore === 0) {
+        app.innerHTML = `
+            <div class="result-panel w-full max-w-2xl p-8 md:p-12 text-center">
+                <div class="relative size-48 mx-auto mb-8 flex items-center justify-center">
+                    <div class="absolute inset-0 rounded-full bg-gray-200 animate-pulse shadow-lg"></div>
+                    <span class="material-symbols-outlined text-[80px] text-gray-400 z-10">help</span>
+                </div>
+                <h1 class="text-3xl font-bold text-gray-800 mb-4">Resultado Inconclusivo</h1>
+                <p class="text-lg text-gray-600 mb-8">
+                    Parece que você selecionou "Nunca" para todas as perguntas. Para descobrir seus dons, 
+                    tente refazer o teste respondendo com mais atenção às suas experiências e sentimentos reais.
+                </p>
+                <button onclick="location.reload()" class="px-8 py-3 bg-primary text-white font-bold rounded-full hover:bg-teal-600 transition-colors shadow-md">
+                    Refazer o Teste
+                </button>
+            </div>
+        `;
+        return;
+    }
+
     const winners = sorted.filter(s => s[1] === topScore).map(s => s[0]);
     const primaryGift = winners[0]; // Take the first one as primary
 
