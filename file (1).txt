@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Spiritual Gifts Intro</title>
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5abfbd",
+                        "background-light": "#f9f6f1",
+                        "background-dark": "#21242c",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem", 
+                        "2xl": "2rem",
+                        "3xl": "3rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'glow': '0 0 40px -10px rgba(90, 191, 189, 0.3)',
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom shimmer animation for the sphere container */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Subtle glass gradient overlay */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        
+        .dark .glass-panel {
+            background: rgba(30, 30, 35, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="font-display antialiased text-[#21242c] dark:text-[#f9f6f1]">
+<div class="relative min-h-screen w-full flex flex-col overflow-hidden transition-colors duration-500">
+<!-- Background: Soft off-white to silver gradient -->
+<div class="absolute inset-0 bg-gradient-to-b from-[#FAF7F2] to-[#F0F2F5] dark:from-background-dark dark:to-[#1a1d23] -z-10"></div>
+<!-- Decorative subtle background blurs -->
+<div class="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="absolute bottom-[-10%] right-[10%] w-[400px] h-[400px] bg-blue-100/30 dark:bg-blue-900/10 rounded-full blur-[80px] pointer-events-none"></div>
+<!-- Navigation -->
+<header class="w-full px-6 py-6 md:px-12 flex items-center justify-between z-20">
+<div class="flex items-center gap-3 group cursor-pointer">
+<div class="flex items-center justify-center w-8 h-8 text-primary dark:text-white transition-transform group-hover:scale-110 duration-300">
+<span class="material-symbols-outlined !text-[28px]">all_inclusive</span>
+</div>
+<span class="text-sm font-bold tracking-widest uppercase opacity-80 group-hover:opacity-100 transition-opacity">Spiritual Gifts</span>
+</div>
+<button class="flex items-center gap-2 text-sm font-semibold opacity-70 hover:opacity-100 transition-all px-4 py-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10">
+<span>Sign In</span>
+<span class="material-symbols-outlined !text-[18px]">arrow_forward</span>
+</button>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow flex items-center justify-center px-4 py-10 relative z-10">
+<div class="layout-content-container flex flex-col w-full max-w-[1000px] items-center">
+<!-- Glass Card Container -->
+<div class="glass-panel w-full max-w-2xl rounded-3xl p-8 md:p-16 shadow-glass flex flex-col items-center text-center transition-all duration-500 hover:shadow-xl hover:shadow-primary/5">
+<!-- 3D Sphere Visual Anchor -->
+<div class="relative w-48 h-48 md:w-64 md:h-64 mb-10 animate-float perspective-1000">
+<!-- Glow effect behind sphere -->
+<div class="absolute inset-0 bg-primary/30 rounded-full blur-3xl scale-75 animate-pulse"></div>
+<!-- The Image Itself -->
+<img alt="Spiritual Sphere" class="w-full h-full object-cover rounded-full shadow-inner relative z-10 mix-blend-multiply dark:mix-blend-normal opacity-90" data-alt="A translucent, iridescent 3D pearl sphere floating with soft ethereal lighting and rainbow refractions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxkpceOcH_RLIqAoQPLlA53Li-_TkQAKTpEOS0SeP6tdz-QTyVTvMMsvhY_vcnywEdUQxnKCd49XcMK22HBv2HAoBw902nYPiD8mVh6IF1doG9XgkCfRRLpfXLIkSDZ57NYwF-HnPjO_v9NQQ9p5AA6WxbV7OgW-3gxFNz7_ASElDaPIVTprQXoRdMwKaxDnDP6bl76-_xhKGolgubT0MCI5HTHTwRQuhbbITZg2srvH8kUpftJbI9Io3JyRmV9vAQ-2WhyqQn2kUF"/>
+<!-- Shine overlay for extra depth -->
+<div class="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white/20 to-transparent pointer-events-none z-20"></div>
+</div>
+<!-- Typography -->
+<div class="space-y-6 max-w-lg">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-[#111818] dark:text-white">
+                            Discover Your <br class="hidden md:block"/>
+<span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-teal-600 dark:from-primary dark:to-teal-300">Divine Purpose</span>
+</h1>
+<p class="text-lg md:text-xl font-medium text-[#5e8787] dark:text-gray-400 leading-relaxed mx-auto max-w-md">
+                            Unveil the unique gifts designed for your soul. A journey of self-discovery through the lens of ancient wisdom.
+                        </p>
+</div>
+<!-- Action Button -->
+<div class="mt-12 group">
+<button class="relative overflow-hidden rounded-full bg-primary hover:bg-[#4aaead] text-white transition-all duration-300 transform group-hover:translate-y-[-2px] shadow-lg shadow-primary/25 hover:shadow-primary/40">
+<div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out skew-y-12"></div>
+<div class="relative flex items-center justify-center h-14 px-10 gap-3">
+<span class="text-base font-bold tracking-[0.02em]">Begin Journey</span>
+<span class="material-symbols-outlined !text-[20px] transition-transform group-hover:translate-x-1">arrow_right_alt</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Minimal Footer -->
+<footer class="w-full py-8 text-center z-20">
+<div class="flex flex-col items-center gap-3 animate-pulse opacity-60 hover:opacity-100 transition-opacity cursor-default">
+<span class="text-xs uppercase tracking-[0.2em] text-[#5e8787] dark:text-gray-500">Scroll to learn more</span>
+<span class="material-symbols-outlined text-[#5e8787] dark:text-gray-500 !text-[20px]">keyboard_arrow_down</span>
+</div>
+<p class="mt-6 text-[10px] text-gray-400 dark:text-gray-600 font-medium">© 2024 Spiritual Gifts. All rights reserved.</p>
+</footer>
+</div>
+</body></html>

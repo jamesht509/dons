@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Assessment Question - Variant 2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5abfbd",
+                        "primary-glow": "#9de0de",
+                        "background-light": "#f9f6f1",
+                        "background-dark": "#21242c",
+                        "surface-glass": "rgba(255, 255, 255, 0.65)",
+                        "pearl-base": "#fcfcfc",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "1.25rem", // 20px
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+                        'pearl': 'inset 0 1px 4px rgba(255,255,255,0.9), inset 0 -2px 6px rgba(0,0,0,0.05), 0 4px 8px rgba(0,0,0,0.05)',
+                        'pearl-hover': 'inset 0 1px 6px rgba(255,255,255,1), inset 0 -2px 4px rgba(0,0,0,0.02), 0 8px 16px rgba(90, 191, 189, 0.15)',
+                        'pearl-active': 'inset 0 2px 4px rgba(0,0,0,0.1), 0 0 0 4px rgba(90, 191, 189, 0.2)',
+                    },
+                    animation: {
+                        'float': 'float 8s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 20px 40px -10px rgba(100, 116, 139, 0.05), 0 0 2px rgba(255,255,255,0.5) inset;
+        }
+
+        .pearl-btn {
+            background: radial-gradient(circle at 35% 35%, #ffffff 0%, #f3f4f6 100%);
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .pearl-btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            background: radial-gradient(circle at 35% 35%, #ffffff 0%, #edf2f2 100%);
+            box-shadow: inset 0 1px 6px rgba(255,255,255,1), inset 0 -2px 4px rgba(0,0,0,0.02), 0 12px 24px rgba(90, 191, 189, 0.15);
+        }
+
+        /* Selected State for Pearl */
+        .pearl-btn.selected {
+            background: radial-gradient(circle at 30% 30%, #5abfbd 0%, #4ca3a1 100%);
+            box-shadow: 0 0 30px rgba(90, 191, 189, 0.4), inset 0 2px 4px rgba(255,255,255,0.3);
+            color: white;
+            border: none;
+        }
+        
+        .pearl-btn.selected .material-symbols-outlined {
+            color: white;
+        }
+
+        .iridescent-bg {
+            background: radial-gradient(circle at 80% 20%, rgba(220, 230, 240, 0.8) 0%, rgba(249, 246, 241, 1) 60%);
+        }
+
+        .sphere-blur {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.6;
+            z-index: 0;
+        }
+
+        /* Custom thin scrollbar if needed */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#21242c] overflow-x-hidden min-h-screen flex flex-col iridescent-bg">
+<!-- Abstract Background Elements -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none">
+<!-- Main Sphere -->
+<div class="sphere-blur w-[600px] h-[600px] bg-gradient-to-tr from-[#e0f2fe] via-[#f0f9ff] to-[#fff1f2] right-[-10%] top-[-10%] animate-float"></div>
+<!-- Secondary Glow -->
+<div class="sphere-blur w-[400px] h-[400px] bg-gradient-to-br from-[#f0fdfa] to-[#ccfbf1] left-[-5%] bottom-[10%] opacity-40"></div>
+</div>
+<!-- Header -->
+<header class="relative z-10 w-full px-6 py-6 md:px-12 flex items-center justify-between">
+<div class="flex items-center gap-3 opacity-90 hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-[#5abfbd]" style="font-size: 28px;">all_inclusive</span>
+<span class="font-bold text-lg tracking-tight text-[#111818]">Spiritual<span class="font-light text-[#5e8787]">Gifts</span></span>
+</div>
+<button class="group flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/50 hover:bg-white/80 border border-white/60 transition-all shadow-sm backdrop-blur-sm">
+<span class="text-xs font-bold text-[#5e8787] tracking-wider uppercase group-hover:text-[#111818] transition-colors">Save &amp; Exit</span>
+<span class="material-symbols-outlined text-[18px] text-[#5e8787] group-hover:text-[#111818] transition-colors">close</span>
+</button>
+</header>
+<!-- Main Content Area -->
+<main class="relative z-10 flex-grow flex items-center justify-center p-4 md:p-6 lg:p-8">
+<div class="w-full max-w-[840px] glass-card rounded-2xl md:rounded-[32px] p-8 md:p-14 lg:p-16 flex flex-col gap-10 md:gap-14 shadow-glass transition-all duration-700">
+<!-- Progress & Meta -->
+<div class="flex flex-col gap-6">
+<div class="flex justify-between items-end">
+<span class="text-[#5e8787] text-xs font-bold tracking-[0.2em] uppercase">Prophetic Insight</span>
+<span class="text-[#8e9ba0] text-sm font-medium font-mono">15 <span class="text-[#cbd5e1]">/</span> 50</span>
+</div>
+<!-- Ultra Thin Progress Bar -->
+<div class="h-[2px] w-full bg-[#e2e8f0] rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[30%] shadow-[0_0_10px_rgba(90,191,189,0.5)] rounded-full transition-all duration-1000 ease-out"></div>
+</div>
+</div>
+<!-- Question -->
+<div class="flex flex-col gap-4 text-center md:px-8">
+<h1 class="text-[#111818] text-2xl md:text-4xl lg:text-[40px] font-medium leading-[1.2] tracking-[-0.02em] drop-shadow-sm">
+                    I often sense things about people or situations before they are revealed naturally.
+                </h1>
+<p class="text-[#7aa2a2] text-sm md:text-base font-light mt-2 opacity-80">
+                    Trust your immediate instinct.
+                </p>
+</div>
+<!-- Interaction: Pearl Scale -->
+<div class="flex flex-col gap-6 md:gap-8 mt-4 select-none">
+<!-- Pearl Container -->
+<div class="flex justify-between items-center gap-2 md:gap-6 px-2 md:px-6">
+<!-- Option 0 -->
+<div class="group flex flex-col items-center gap-3 cursor-pointer">
+<button aria-label="Score 0" class="pearl-btn w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center shadow-pearl text-[#5e8787] font-semibold text-lg">
+                            0
+                        </button>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity text-[10px] md:text-xs font-medium text-[#94a3b8] uppercase tracking-wider absolute transform translate-y-16">Never</span>
+</div>
+<!-- Option 1 -->
+<div class="group flex flex-col items-center gap-3 cursor-pointer">
+<button aria-label="Score 1" class="pearl-btn w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center shadow-pearl text-[#5e8787] font-semibold text-lg">
+                            1
+                        </button>
+</div>
+<!-- Option 2 -->
+<div class="group flex flex-col items-center gap-3 cursor-pointer">
+<button aria-label="Score 2" class="pearl-btn w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center shadow-pearl text-[#5e8787] font-semibold text-lg">
+                            2
+                        </button>
+</div>
+<!-- Option 3 (Selected Example) -->
+<div class="group flex flex-col items-center gap-3 cursor-pointer relative">
+<button aria-label="Score 3" class="pearl-btn selected w-12 h-12 md:w-16 md:h-16 -mt-1 md:-mt-1 rounded-full flex items-center justify-center shadow-pearl text-white font-bold text-xl md:text-2xl">
+                            3
+                        </button>
+<div class="absolute -bottom-8 opacity-100 transition-opacity text-[10px] md:text-xs font-bold text-primary uppercase tracking-wider">Often</div>
+</div>
+<!-- Option 4 -->
+<div class="group flex flex-col items-center gap-3 cursor-pointer">
+<button aria-label="Score 4" class="pearl-btn w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center shadow-pearl text-[#5e8787] font-semibold text-lg">
+                            4
+                        </button>
+</div>
+<!-- Option 5 -->
+<div class="group flex flex-col items-center gap-3 cursor-pointer">
+<button aria-label="Score 5" class="pearl-btn w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center shadow-pearl text-[#5e8787] font-semibold text-lg">
+                            5
+                        </button>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity text-[10px] md:text-xs font-medium text-[#94a3b8] uppercase tracking-wider absolute transform translate-y-16">Always</span>
+</div>
+</div>
+<!-- Labels Row for Mobile/Accessibility fallback visualization -->
+<div class="flex justify-between px-2 md:px-6 text-[10px] md:text-xs font-medium text-[#adb5bd] uppercase tracking-widest mt-2">
+<span>Not Me</span>
+<span>Exactly Me</span>
+</div>
+</div>
+<!-- Footer Navigation -->
+<div class="flex justify-between items-center mt-2 pt-6 border-t border-slate-100/50">
+<button class="text-[#94a3b8] hover:text-[#5e8787] text-sm font-medium flex items-center gap-2 transition-colors px-4 py-2 rounded-lg hover:bg-slate-50/50">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+                    Previous
+                </button>
+<button class="text-[#94a3b8] hover:text-[#5e8787] text-sm font-medium flex items-center gap-2 transition-colors px-4 py-2 rounded-lg hover:bg-slate-50/50">
+                    Skip this question
+                    <span class="material-symbols-outlined text-lg">skip_next</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Decorative bottom blur for page grounding -->
+<div class="fixed bottom-0 w-full h-24 bg-gradient-to-t from-white/60 to-transparent pointer-events-none z-20"></div>
+<script>
+        // Simple script to handle selection visualization
+        const pearls = document.querySelectorAll('.pearl-btn');
+        pearls.forEach(pearl => {
+            pearl.addEventListener('click', function() {
+                // Reset all
+                pearls.forEach(p => {
+                    p.classList.remove('selected');
+                    p.classList.remove('w-12', 'h-12', 'md:w-16', 'md:h-16', '-mt-1', 'md:-mt-1', 'text-white', 'text-xl', 'md:text-2xl');
+                    p.classList.add('w-10', 'h-10', 'md:w-14', 'md:h-14', 'text-[#5e8787]', 'text-lg');
+                    
+                    // Hide labels if any
+                    const label = p.parentElement.querySelector('.absolute');
+                    if(label) label.classList.replace('opacity-100', 'opacity-0');
+                });
+
+                // Set active
+                this.classList.add('selected');
+                this.classList.remove('w-10', 'h-10', 'md:w-14', 'md:h-14', 'text-[#5e8787]', 'text-lg');
+                this.classList.add('w-12', 'h-12', 'md:w-16', 'md:h-16', '-mt-1', 'md:-mt-1', 'text-white', 'text-xl', 'md:text-2xl');
+                
+                // Show label if it exists (simulating the "Often" label appearing for the selected item)
+                // In a real app, we'd dynamically move the label text
+            });
+        });
+    </script>
+</body></html>

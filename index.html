@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Spiritual Gifts Intro</title>
+    <!-- Google Fonts: Manrope -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5abfbd",
+                        "background-light": "#f9f6f1",
+                        "background-dark": "#21242c",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "3xl": "3rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'glow': '0 0 40px -10px rgba(90, 191, 189, 0.3)',
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+                    }
+                },
+            },
+        }
+    </script>
+
+    <!-- Custom CSS from Template + Legacy App Styles -->
+    <style>
+        /* Template Animations */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Glass Panel */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .dark .glass-panel {
+            background: rgba(30, 30, 35, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* App Container for seamless transition */
+        #quiz-container {
+            display: none;
+            /* Hidden by default */
+            width: 100%;
+            height: 100vh;
+            /* We will let the specific quiz styles handle layout */
+        }
+    </style>
+    <!-- Link legacy styles for the Quiz part -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-display antialiased text-[#21242c] dark:text-[#f9f6f1]">
+
+    <!-- LANIDNG PAGE WRAPPER -->
+    <div id="landing-page"
+        class="relative min-h-screen w-full flex flex-col overflow-hidden transition-colors duration-500">
+
+        <!-- 3D Canvas Container (Global) -->
+        <div id="canvas-container"></div>
+
+        <!-- Background: Soft off-white to silver gradient -->
+        <div
+            class="absolute inset-0 bg-gradient-to-b from-[#FAF7F2] to-[#F0F2F5] dark:from-background-dark dark:to-[#1a1d23] -z-10">
+        </div>
+        <!-- Decorative subtle background blurs -->
+        <div
+            class="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-[-10%] right-[10%] w-[400px] h-[400px] bg-blue-100/30 dark:bg-blue-900/10 rounded-full blur-[80px] pointer-events-none">
+        </div>
+
+        <!-- Navigation -->
+        <header class="w-full px-6 py-6 md:px-12 flex items-center justify-between z-20">
+            <div class="flex items-center gap-3 group cursor-pointer">
+                <div
+                    class="flex items-center justify-center w-8 h-8 text-primary dark:text-white transition-transform group-hover:scale-110 duration-300">
+                    <span class="material-symbols-outlined !text-[28px] text-[#FFD60A]">all_inclusive</span>
+                </div>
+                <!-- HEADER TITLE: VPS - Vocacionado para Servir is GREY now as requested -->
+                <span
+                    class="text-sm font-bold tracking-widest uppercase text-gray-500 opacity-90 group-hover:opacity-100 transition-opacity">VPS
+                    - Vocacionado para Servir</span>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="flex-grow flex items-center justify-center px-4 py-10 relative z-10">
+            <div class="layout-content-container flex flex-col w-full max-w-[1000px] items-center">
+                <!-- Glass Card Container -->
+                <div
+                    class="glass-panel w-full max-w-2xl rounded-3xl p-8 md:p-16 shadow-glass flex flex-col items-center text-center transition-all duration-500 hover:shadow-xl hover:shadow-primary/5">
+
+                    <!-- 3D Sphere Visual Anchor -->
+                    <div class="relative w-48 h-48 md:w-64 md:h-64 mb-10 animate-float perspective-1000">
+                        <!-- Glow effect behind sphere -->
+                        <div class="absolute inset-0 bg-primary/30 rounded-full blur-3xl scale-75 animate-pulse"></div>
+                        <!-- The Image Itself -->
+                        <img alt="Spiritual Sphere"
+                            class="w-full h-full object-cover rounded-full shadow-inner relative z-10 mix-blend-multiply dark:mix-blend-normal opacity-90"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxkpceOcH_RLIqAoQPLlA53Li-_TkQAKTpEOS0SeP6tdz-QTyVTvMMsvhY_vcnywEdUQxnKCd49XcMK22HBv2HAoBw902nYPiD8mVh6IF1doG9XgkCfRRLpfXLIkSDZ57NYwF-HnPjO_v9NQQ9p5AA6WxbV7OgW-3gxFNz7_ASElDaPIVTprQXoRdMwKaxDnDP6bl76-_xhKGolgubT0MCI5HTHTwRQuhbbITZg2srvH8kUpftJbI9Io3JyRmV9vAQ-2WhyqQn2kUF" />
+                        <!-- Shine overlay for extra depth -->
+                        <div
+                            class="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white/20 to-transparent pointer-events-none z-20">
+                        </div>
+                    </div>
+
+                    <!-- Typography -->
+                    <div class="space-y-6 max-w-lg mb-8">
+                        <!-- MAIN TITLE: Darkened for readability -->
+                        <h1
+                            class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-black dark:text-white drop-shadow-sm">
+                            Descubra seus <br class="hidden md:block" />
+                            <span
+                                class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-teal-600 dark:from-primary dark:to-teal-300">Dons
+                                Espirituais</span>
+                        </h1>
+                        <p
+                            class="text-lg md:text-xl font-medium text-[#5e8787] dark:text-gray-400 leading-relaxed mx-auto max-w-md">
+                            Uma jornada de autoconhecimento conectada. Descubra os dons únicos desenhados para sua alma.
+                        </p>
+                    </div>
+
+                    <!-- INPUT FIELD (Added functionality) -->
+                    <div class="w-full max-w-xs mb-6 relative group">
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <span
+                                class="material-symbols-outlined text-gray-400 group-focus-within:text-[#FFD60A] transition-colors">person</span>
+                        </div>
+                        <input type="text" id="landing-username"
+                            class="block w-full pl-12 pr-4 py-4 bg-white/50 dark:bg-black/20 border-2 border-gray-100 dark:border-gray-700 rounded-2xl text-lg focus:ring-0 focus:border-[#FFD60A] placeholder-gray-400 transition-all text-[#21242c] dark:text-white"
+                            placeholder="Qual é o seu nome?" autocomplete="off">
+                    </div>
+
+                    <!-- Action Button -->
+                    <div class="group">
+                        <button id="landing-start-btn"
+                            class="relative overflow-hidden rounded-full bg-[#FFD60A] hover:bg-[#E6C200] text-black transition-all duration-300 transform group-hover:translate-y-[-2px] shadow-lg shadow-[#FFD60A]/25 hover:shadow-[#FFD60A]/40">
+                            <div
+                                class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out skew-y-12">
+                            </div>
+                            <div class="relative flex items-center justify-center h-14 px-10 gap-3">
+                                <span class="text-base font-bold tracking-[0.02em]">Iniciar Jornada</span>
+                                <span
+                                    class="material-symbols-outlined !text-[20px] transition-transform group-hover:translate-x-1">arrow_right_alt</span>
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <!-- Minimal Footer with Updated Text -->
+        <footer class="w-full py-8 text-center z-20">
+            <p class="mt-6 text-[10px] text-gray-400 dark:text-gray-600 font-medium tracking-widest uppercase">
+                Vocacionado para Servir VPS</p>
+        </footer>
+    </div>
+
+    <!-- QUIZ CONTAINER (Legacy/App View) -->
+    <div id="quiz-container">
+        <div id="app"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
